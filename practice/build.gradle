@@ -2,8 +2,11 @@ plugins {
 	id 'java'
 	id 'org.springframework.boot' version '3.2.3'
 	id 'io.spring.dependency-management' version '1.1.4'
+	id 'application'
 }
-
+application {
+	mainClass = 'com.example.demo.Main'
+}
 group = 'com.example'
 version = '0.0.1-SNAPSHOT'
 
@@ -18,6 +21,8 @@ repositories {
 }
 
 dependencies {
-	implementation 'org.springframework.boot:spring-boot-starter'
+	implementation 'org.springframework.boot:spring-boot-starter'        // 스프링 핵심
+	implementation 'org.springframework.boot:spring-boot-starter-aop'    // AOP 기능
 	testImplementation 'org.springframework.boot:spring-boot-starter-test'
 }
+
